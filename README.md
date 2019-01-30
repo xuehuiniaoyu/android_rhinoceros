@@ -87,3 +87,182 @@ hello.hj
     }
 }
 ```
+
+### AdapterView is very simple
+grid.hj (layout)
+```
+{{grid-view}}: {
+  width: 100
+  height: 100
+  view: "{{assets}}/hjson/view.hjson"
+  data: "{{assets}}/hjson/list_item_data.hjson"
+}
+```
+
+list_item_data.hjson
+```
+[
+    {
+        hello: "你好"
+        world: "中国"
+    }
+
+    {
+        hello: "Hello"
+        world: "China"
+    }
+
+    {
+        hello: "Hello"
+        world: "Bird"
+    }
+
+    {
+        hello: "Hello"
+        world: "Rhinoceros"
+    }
+]
+```
+view.hjson
+```
+{
+    body: {
+	    {{text-view}}: {
+            width: "50"
+            height: "50"
+            text: "{{hello}} {{world }}"
+	    }
+    }
+}
+```
+
+### Weight layout
+```
+{
+    body: {
+        heightSum: 9
+
+        {{relative-layout}}: {
+            id: layout1
+            heightWeight: 3
+            background: "#00ff00"
+        }
+
+        {{relative-layout}}: {
+            id: layout2
+            below: "#layout1"
+            heightWeight: 3
+            background: "#a64d79"
+        }
+
+        {{relative-layout}}: {
+            id: layout3
+            below: "#layout2"
+            heightWeight: 3
+            background: "#45818e"
+        }
+    }
+}
+```
+
+### LinearLayout
+```
+{{linear-layout}}: {
+  // orien: h
+  orien: v
+  width: fill
+  height: fill
+
+  {{text-view}}: {
+  width: fill
+  height: 10
+  text: hello world
+  }
+
+  {{text-view}}: {
+  width: fill
+  height: 10
+  text: hello world
+  }
+
+  {{text-view}}: {
+  width: fill
+  height: 10
+  text: hello world
+  }
+}
+```
+
+### RelativeLayout
+```
+{{relative-layout}}: {
+    width: 100
+    height: 100
+
+    {{text-view}}: {
+        width: 40
+        height: 30
+        asParent: right|bottom
+        text: Hello World!
+        textAlign:centerH|bottom
+    }
+}
+```
+
+### javascript
+```
+{
+    head: {
+        script:
+            '''
+            function onClick(v) {
+                __console.toast("javascript click view:"+v);
+            }
+            '''
+    }
+
+    body: {
+        {{text-view}}: {
+            onClick: "javascript: onClick"
+        }
+    }
+}
+```
+
+
+### The custom View (自定义View)
+1.
+```
+{
+    define: {
+        myLayout: "com.xxx.view.MyLayout"
+    }
+
+    body: {
+        myLayout: {
+            customAttr: "value"
+        }
+    }
+}
+```
+
+2.
+```
+public class MyLayout extends GroupWapper<LinearLayout> {
+    public MyLayout(Context context, JsonValue value) {
+        super(context, value);
+    }
+
+    /**
+     * 接收自定义属性
+     * Custom Attr
+     * @param value
+     */
+    public void setCustomAttr(JsonValue value) {
+        if(value.isString()) {
+            // get "customAttr"
+            String customAttr = value.asString();
+        }
+    }
+}
+```
