@@ -55,7 +55,7 @@ allprojects {
 
 
 dependencies {
-	implementation 'com.github.xuehuiniaoyu:android_rhinoceros:Tag'
+	implementation 'com.github.xuehuiniaoyu:android_rhinoceros:v1.0'
 }
 ```
 
