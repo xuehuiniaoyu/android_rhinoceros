@@ -55,11 +55,24 @@ allprojects {
 
 
 dependencies {
-	implementation 'com.github.xuehuiniaoyu:android_rhinoceros:v1.0'
+	implementation 'com.github.xuehuiniaoyu:android_rhinoceros:Tag'
 }
 ```
 
 ### hello world
+
+activity-code
+```
+public class CustomActivity extends HActivity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentViewFromAssets("hello.hj");
+    }
+
+}
+```
+hello.hj
 
 ```
 {
