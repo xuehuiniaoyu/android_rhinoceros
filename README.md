@@ -43,7 +43,7 @@ Hello Handlebars.java!
 
 ![](logo.png)
 
-### how to 
+### 4.1 how to 
 ```
 allprojects {
   repositories {
@@ -59,7 +59,7 @@ dependencies {
 }
 ```
 
-### hello world
+### 4.2 hello world
 
 activity-code
 ```
@@ -88,7 +88,7 @@ hello.hj
 }
 ```
 
-### AdapterView is very simple
+### 4.3 AdapterView is very simple
 grid.hj (layout)
 ```
 {{grid-view}}: {
@@ -136,7 +136,7 @@ view.hjson
 }
 ```
 
-### Weight layout
+### 4.4 Weight layout
 ```
 {
     body: {
@@ -165,7 +165,7 @@ view.hjson
 }
 ```
 
-### LinearLayout
+### 4.5 LinearLayout
 ```
 {{linear-layout}}: {
   // orien: h
@@ -193,7 +193,7 @@ view.hjson
 }
 ```
 
-### RelativeLayout
+### 4.6 RelativeLayout
 ```
 {{relative-layout}}: {
     width: 100
@@ -209,7 +209,7 @@ view.hjson
 }
 ```
 
-### javascript
+### 4.7 javascript
 ```
 {
     head: {
@@ -230,7 +230,7 @@ view.hjson
 ```
 
 
-### The custom View (自定义View)
+### 4.8 The custom View (自定义View)
 1.
 ```
 {
