@@ -1,5 +1,4 @@
-
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! [After maintenance the new branch](https://github.com/xuehuiniaoyu/oxpecker) (ÐÂÏîÎª oxpecker)
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! [After maintenance the new branch](https://github.com/xuehuiniaoyu/oxpecker) (ï¿½ï¿½ï¿½ï¿½Îª oxpecker)
 
 # 1.hjson-java
 
@@ -21,6 +20,7 @@
 [![javadoc](https://javadoc.io/badge/com.github.jknack/handlebars.svg)](https://javadoc.io/doc/com.github.jknack/handlebars)
 
 ===============
+
 ## Logic-less and semantic Mustache templates with Java
 
 ```java
@@ -32,21 +32,25 @@ System.out.println(template.apply("Handlebars.java"));
 ```
 
 Output:
+
 ```
 Hello Handlebars.java!
 ```
 
 # 3.Rhino
+
 ![Rhino Intro](https://mdn.mozillademos.org/files/663/rhino.jpg)
 
 [Rhino](https://developer.mozilla.org/zh-CN/docs/Mozilla/Projects/Rhino) is an open-source implementation of [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) written entirely in Java. It is typically embedded into Java applications to provide scripting to end users. It is embedded in J2SE 6 as the default Java scripting engine.
 
 # 4.android_rhinoceros
+
 [github](https://github.com/xuehuiniaoyu/android_rhinoceros)
 
 ![](logo.png)
 
-### 4.1 how to 
+### 4.1 how to
+
 ```
 allprojects {
   repositories {
@@ -58,13 +62,14 @@ allprojects {
 
 
 dependencies {
-	implementation 'com.github.xuehuiniaoyu:oxpecker:v1.0'
+    implementation 'com.github.xuehuiniaoyu:oxpecker:v1.1'
 }
 ```
 
 ### 4.2 hello world
 
 activity-code
+
 ```
 public class CustomActivity extends HActivity {
     @Override
@@ -75,6 +80,7 @@ public class CustomActivity extends HActivity {
 
 }
 ```
+
 hello.hj
 
 ```
@@ -92,7 +98,9 @@ hello.hj
 ```
 
 ### 4.3 AdapterView is very simple
+
 grid.hj (layout)
+
 ```
 {{grid-view}}: {
   width: 100
@@ -103,11 +111,12 @@ grid.hj (layout)
 ```
 
 list_item_data.hjson
+
 ```
 [
     {
-        hello: "ÄãºÃ"
-        world: "ÖÐ¹ú"
+        hello: "ï¿½ï¿½ï¿½"
+        world: "ï¿½Ð¹ï¿½"
     }
 
     {
@@ -126,20 +135,23 @@ list_item_data.hjson
     }
 ]
 ```
+
 view.hjson
+
 ```
 {
     body: {
-	    {{text-view}}: {
+        {{text-view}}: {
             width: "50"
             height: "50"
             text: "{{hello}} {{world }}"
-	    }
+        }
     }
 }
 ```
 
 ### 4.4 Weight layout
+
 ```
 {
     body: {
@@ -169,6 +181,7 @@ view.hjson
 ```
 
 ### 4.5 LinearLayout
+
 ```
 {{linear-layout}}: {
   // orien: h
@@ -197,6 +210,7 @@ view.hjson
 ```
 
 ### 4.6 RelativeLayout
+
 ```
 {{relative-layout}}: {
     width: 100
@@ -213,6 +227,7 @@ view.hjson
 ```
 
 ### 4.7 javascript
+
 ```
 {
     head: {
@@ -232,9 +247,10 @@ view.hjson
 }
 ```
 
+### 4.8 The custom View (ï¿½Ô¶ï¿½ï¿½ï¿½View)
 
-### 4.8 The custom View (×Ô¶¨ÒåView)
 1.
+
 ```
 {
     define: {
@@ -250,6 +266,7 @@ view.hjson
 ```
 
 2.
+
 ```
 public class MyLayout extends GroupWapper<LinearLayout> {
     public MyLayout(Context context, JsonValue value) {
@@ -257,7 +274,7 @@ public class MyLayout extends GroupWapper<LinearLayout> {
     }
 
     /**
-     * ½ÓÊÕ×Ô¶¨ÒåÊôÐÔ
+     * ï¿½ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
      * Custom Attr
      * @param value
      */
