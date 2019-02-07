@@ -62,7 +62,7 @@ allprojects {
 
 
 dependencies {
-    implementation 'com.github.xuehuiniaoyu:oxpecker:v1.1'
+    implementation 'com.github.xuehuiniaoyu:oxpecker:v1.2'
 }
 ```
 
