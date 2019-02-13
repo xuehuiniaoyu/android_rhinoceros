@@ -52,18 +52,7 @@ Hello Handlebars.java!
 ### 4.1 how to
 
 ```
-allprojects {
-  repositories {
-  ...
-  maven { url 'https://jitpack.io' }
-  }
-}
-
-
-
-dependencies {
-    implementation 'com.github.xuehuiniaoyu:oxpecker:v1.2'
-}
+[oxpecker](https://github.com/xuehuiniaoyu/oxpecker)
 ```
 
 ### 4.2 hello world
