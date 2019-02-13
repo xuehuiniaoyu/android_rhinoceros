@@ -51,9 +51,7 @@ Hello Handlebars.java!
 
 ### 4.1 how to
 
-```
 [oxpecker](https://github.com/xuehuiniaoyu/oxpecker)
-```
 
 ### 4.2 hello world
 
